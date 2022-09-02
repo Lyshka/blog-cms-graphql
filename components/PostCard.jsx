@@ -3,7 +3,7 @@ import Image from 'next/image';
 import moment from 'moment';
 import Link from 'next/link';
 
-// import {grpahCMSImageLoader} from '../util';
+import Loader from "./Loader"
 
 const PostCard = ({post}) => (
 	<div className="bg-white shadow-lg rounded-t-3xl p-0 pb-12 mb-8">
@@ -11,9 +11,9 @@ const PostCard = ({post}) => (
 			<Image
 				unoptimized
 				priority
-				// loader={grpahCMSImageLoader}
+				loader={<Loader />}
 				alt={post.title}
-				className="shadow-lg rounded-t-3xl"
+				className="shadow-lg rounded-t-3xl object-fill"
 				layout="fill"
 				src={post.featuredImage.url}
 			/>
